@@ -7,6 +7,8 @@ import Children from "./components/ChildrenType";
 import ReactChildren from "./components/ReactChildrenType";
 import EventType from "./components/EventType";
 import UseState from "./components/useStateType";
+import User from "./context/User";
+import { UserContextProvider } from "./context/UserContext";
 
 function App() {
   const person = {
@@ -55,6 +57,9 @@ function App() {
         value=""
       />
       <UseState/>
+      <UserContextProvider>
+        <User/>
+      </UserContextProvider>
     </div>
   );
 }
