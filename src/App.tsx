@@ -6,6 +6,7 @@ import UnionType from "./components/UnionType";
 import Children from "./components/ChildrenType";
 import ReactChildren from "./components/ReactChildrenType";
 import EventType from "./components/EventType";
+import UseState from "./components/useStateType";
 
 function App() {
   const person = {
@@ -53,6 +54,7 @@ function App() {
         }}
         value=""
       />
+      <UseState/>
     </div>
   );
 }
