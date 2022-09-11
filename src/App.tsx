@@ -1,7 +1,10 @@
 import "./App.css";
-import Greet from "./components/Greet";
-import Person from "./components/Person";
-import PersonList from "./components/PersonList";
+import Greet from "./components/PrimitiveType";
+import Person from "./components/ObjectType";
+import PersonList from "./components/ArrayType";
+import Status from "./components/MultipleType";
+import Children from "./components/ChildrenType";
+import ReactChildren from "./components/ReactChildrenType";
 
 function App() {
   const person = {
@@ -29,6 +32,9 @@ function App() {
       <Greet name="Vipul" />
       <Person name={person} />
       <PersonList names={personList} />
+      <Status status="success" />
+      <Children>This is children props</Children>
+      <ReactChildren><div>This is react node children</div></ReactChildren>
     </div>
   );
 }
