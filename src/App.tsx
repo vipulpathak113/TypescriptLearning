@@ -1,10 +1,11 @@
 import "./App.css";
-import Greet from "./components/PrimitiveType";
-import Person from "./components/ObjectType";
-import PersonList from "./components/ArrayType";
-import Status from "./components/MultipleType";
+import PrimitiveType from "./components/PrimitiveType";
+import ObjectType from "./components/ObjectType";
+import ArrayType from "./components/ArrayType";
+import UnionType from "./components/UnionType";
 import Children from "./components/ChildrenType";
 import ReactChildren from "./components/ReactChildrenType";
+import EventType from "./components/EventType";
 
 function App() {
   const person = {
@@ -29,12 +30,29 @@ function App() {
 
   return (
     <div className="App">
-      <Greet name="Vipul" />
-      <Person name={person} />
-      <PersonList names={personList} />
-      <Status status="success" />
+      <PrimitiveType name="Vipul" />
+      <ObjectType name={person} />
+      <ArrayType names={personList} />
+      <UnionType status="success" />
       <Children>This is children props</Children>
-      <ReactChildren><div>This is react node children</div></ReactChildren>
+      <ReactChildren>
+        <div>This is react node children</div>
+      </ReactChildren>
+      <EventType
+        handleClick={() => {
+          alert("This btn click type");
+        }}
+        handleEventClick={(event) => {
+          alert("event type");
+        }}
+        handleEventWithParamsClick={(event, id) => {
+          alert(id);
+        }}
+        handleChangeEvent={(e) => {
+          console.log(e);
+        }}
+        value=""
+      />
     </div>
   );
 }
