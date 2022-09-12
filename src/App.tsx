@@ -10,6 +10,7 @@ import UseState from "./components/useStateType";
 import User from "./context/User";
 import { UserContextProvider } from "./context/UserContext";
 import { Counter } from "./components/ClassComponent";
+import Generics from "./components/GenericType";
 
 function App() {
   const person = {
@@ -62,6 +63,18 @@ function App() {
         <User />
       </UserContextProvider>
       <Counter message="The count is" />
+      <Generics
+        handleClick={(item) => {
+          alert(`Item clicked is ${item}`);
+        }}
+        items={["I", "am", "groot"]}
+      />
+      <Generics
+        handleClick={(item) => {
+          alert(`Item clicked is ${item}`);
+        }}
+        items={[1, 2, 3]}
+      />
     </div>
   );
 }
