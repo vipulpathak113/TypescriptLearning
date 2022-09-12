@@ -9,6 +9,7 @@ import EventType from "./components/EventType";
 import UseState from "./components/useStateType";
 import User from "./context/User";
 import { UserContextProvider } from "./context/UserContext";
+import { Counter } from "./components/ClassComponent";
 
 function App() {
   const person = {
@@ -56,10 +57,11 @@ function App() {
         }}
         value=""
       />
-      <UseState/>
+      <UseState />
       <UserContextProvider>
-        <User/>
+        <User />
       </UserContextProvider>
+      <Counter message="The count is" />
     </div>
   );
 }
