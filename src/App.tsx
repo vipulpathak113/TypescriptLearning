@@ -11,6 +11,7 @@ import User from "./context/User";
 import { UserContextProvider } from "./context/UserContext";
 import { Counter } from "./components/ClassComponent";
 import Generics from "./components/GenericType";
+import HTML from "./components/HTMLProps";
 
 function App() {
   const person = {
@@ -75,6 +76,7 @@ function App() {
         }}
         items={[1, 2, 3]}
       />
+      <HTML variant="primary">Primary Button</HTML>
     </div>
   );
 }
