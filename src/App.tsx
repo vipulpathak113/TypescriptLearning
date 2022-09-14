@@ -12,6 +12,7 @@ import { UserContextProvider } from "./context/UserContext";
 import { Counter } from "./components/ClassComponent";
 import Generics from "./components/GenericType";
 import HTML from "./components/HTMLProps";
+import Polymorphic from "./components/Polymorphic";
 
 function App() {
   const person = {
@@ -77,6 +78,9 @@ function App() {
         items={[1, 2, 3]}
       />
       <HTML variant="primary">Primary Button</HTML>
+      <Polymorphic as="h2" color="primary" size="lg">Primary</Polymorphic>
+      <Polymorphic as="p" color="secondary" size="md">Secondary</Polymorphic>
+      <Polymorphic as="label" htmlFor="id" size="sm">Small</Polymorphic>
     </div>
   );
 }
